@@ -47,3 +47,7 @@ end
 
 gem 'carrierwave'
 gem 'twitter-bootstrap-rails'
+gem 'devise'
+gem 'pry-rails'
+gem 'mini_magick'
+gem 'kaminari'
