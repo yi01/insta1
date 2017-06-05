@@ -1,0 +1,11 @@
+<ul>
+  <%= form_for @picture do |f| %>
+
+    <li><%= f.label :画像 %></li>
+    <li><%= f.file_field :image %></li>
+
+    <li><%= f.label :コメント %></li>
+    <li><%= f.text_area :comment %></li>
+    <%= f.submit %>
+  <% end %>
+</ul>

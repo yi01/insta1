@@ -1,5 +1,9 @@
 <p style="text-align: center;"><%= notice %><%= alert %></p>
 
-<% @pictures.each do |picture| %>
-  <%= picture.image %>
-<% end %>
+  <% @pictures.each do |picture| %>
+      <%= image_tag picture.image %>
+      <% if picture.user_id == current_user.id %>
+        <%= link_to "edit", edit_picture_path(picture.id) %>
+        <%= link_to "delete", picture_path(picture.id), method: :delete, data: {confirm: "are you sure?"} %>
+      <% end %>
+  <% end %>
