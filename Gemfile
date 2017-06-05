@@ -51,3 +51,9 @@ gem 'devise'
 gem 'pry-rails'
 gem 'mini_magick'
 gem 'kaminari'
+
+group :development do
+  gem 'letter_opener_web'
+end
+
+gem 'rails_12factor', group: :production
