@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_out_path_for(resource)
+    new_user_session_path
+  end
+
     #変数PERMISSIBLE_ATTRIBUTESに配列[:name]を代入
     PERMISSIBLE_ATTRIBUTES = %i(name)
 
