@@ -1,11 +1,13 @@
 <p style="text-align: center;"><%= notice %><%= alert %></p>
 
-  <% @pictures.each do |picture| %>
-      <%= link_to image_tag(picture.image), picture_path(picture) %>
-        <%= link_to "edit", edit_picture_path(picture.id) %>
-        <%= link_to "delete", picture_path(picture.id), method: :delete, data: {confirm: "are you sure?"} %>
-  <% end %>
+<section class="function container-fluid">
 
-
-自分の投稿したものだけ削除・編集可能
-デザイン
+<% @pictures.each do |picture| %>
+  <div class="row" style="border-bottom: 1px solid gray; margin: 50px;">
+    <%= image_tag(picture.image) %>
+    <p><%= picture.comment %></p>
+    <%= link_to "edit", edit_picture_path(picture.id) %>
+    <%= link_to "delete", picture_path(picture.id), method: :delete, data: {confirm: "are you sure?"} %>
+  </div>
+<% end %>
+ </section>

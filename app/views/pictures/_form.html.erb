@@ -1,11 +1,12 @@
-<ul>
-  <%= form_for @picture do |f| %>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <%= form_for @picture do |f| %>
 
-    <li><%= f.label :画像 %></li>
-    <li><%= f.file_field :image %></li>
+        <li><%= f.file_field :image %></li>
 
-    <li><%= f.label :コメント %></li>
-    <li><%= f.text_area :comment %></li>
-    <%= f.submit %>
-  <% end %>
-</ul>
+      <li><%= f.label :コメント %></li>
+      <li><%= f.text_area :comment %></li>
+      <p><%= f.submit %></p>
+    <% end %>
+  </div>
+  </div>
