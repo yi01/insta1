@@ -6,7 +6,9 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(create_params)
     if @picture.save
-      redirect_to :root
+      redirect_to :root, notice: "作成しました"
+    else
+      render 'new'
     end
   end
 
@@ -23,6 +25,7 @@ class PicturesController < ApplicationController
     if @picture.update(create_params)
       redirect_to :root
     else
+      render "edit"
     end
   end
 
