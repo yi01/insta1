@@ -12,7 +12,8 @@
       <div class="header-left">
         <%= link_to "Instagram", root_path%>
       </div>
-      <div class="header-right">
+
+      <ul class="header-right">
         <% unless user_signed_in? %>
         <li><%= link_to "ログイン", new_user_session_path %></li>
         <li><%= link_to "サインイン", new_user_registration_path %></li>
@@ -21,7 +22,11 @@
           <li><%= link_to 'マイページ', edit_user_registration_path %>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
         <% end %>
-      </div>
+      </ul>
+
+
+
+
 
     </ul>
   </header>
